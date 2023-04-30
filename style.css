@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Poppins:wght@500&display=swap');
+
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.navBar_position {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+    background-color: #fff
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    /* width: 100%; */
+
+}
+
+
+.bondIndia_logo {
+    display: none;
+}
+
+.nav-links a {
+    color: #393939;
+}
+
+/* .menu li .explore {
+
+    margin-left: 8rem;
+} */
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+    display: none;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+
+.menu_one {
+    display: flex;
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+.menu_second {
+    display: flex;
+    margin: 0 2rem 0 7rem;
+}
+
+.menu_third {
+    display: flex;
+    margin-left: 15rem;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+
+.menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+
+
+.menu li a .bondPic {
+    display: flex
+}
+
+.menu li a .bondPic img {
+    margin-top: -6px;
+}
+
+.menu li a .bondPic p {
+    /* margin-top: 0.2rem; */
+    margin-left: 0.1rem;
+    color: #2a5ee1
+}
+
+.bondsLogo {
+    margin: 0 -120px 0 10px;
+}
+
+
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+    /* margin: 0 0 0 6rem; */
+}
+
+.dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 0;
+    position: absolute;
+    /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li+li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+
+
+.loginSignup {
+    display: flex;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    border: 1px solid rgba(5, 5, 5, 0.381);
+    box-sizing: border-box;
+    box-shadow: 0px 2px 3px rgba(81, 81, 81, 0.15);
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: -6px;
+}
+
+
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1200px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        flex-direction: column-reverse;
+        /* text-align: center; */
+        justify-content: space-between;
+        /* padding: 20px 0px; */
+        height: 250vh;
+        width: auto;
+    }
+
+    .bondIndia_logo {
+        display: block;
+    }
+
+    .navbar .nav-links .nav_before_small {
+        display: flex;
+
+    }
+
+    .navbar .nav-links .bondIndia_logo {
+        margin-left: 15rem;
+        margin-top: -2rem;
+        /* width: auto; */
+    }
+
+    .navbar .nav-links .logo {
+        margin-left: 30rem;
+        margin-top: -2rem;
+        /* width: auto; */
+    }
+
+    .menu_one {
+        display: block;
+        margin-left: 2rem;
+    }
+
+    .menu_second {
+        display: none;
+        margin: 0 0 0 2rem;
+    }
+
+    .menu_third {
+        display: block;
+        margin-left: 2rem
+    }
+
+    .menu li .explore {
+
+        margin-left: 0;
+    }
+
+
+    .services:hover .dropdown {
+        display: block;
+    }
+
+    .menu .bondsLogo {
+        display: block;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: #4c9e9e;
+        transition: 0.3s ease;
+    }
+
+    .menu li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        /* margin-left: 40rem; */
+
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+}
+
+
+@media(max-width:853px) {
+    .navbar .nav-links .bondIndia_logo {
+        margin-left: 10rem;
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+
+    .navbar .nav-links .logo {
+        margin-left: 16rem;
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+}
+
+@media(max-width:770px) {
+    .navbar .nav-links .bondIndia_logo {
+        margin-left: 10rem;
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+
+    .navbar .nav-links .logo {
+        margin-left: 16rem;
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+}
+
+@media(max-width:551px) {
+    .navbar .nav-links .bondIndia_logo {
+        margin-left: 5rem;
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+
+    .navbar .nav-links .logo {
+        margin-left: 10rem;
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+}
+
+@media(max-width:382px) {
+    .navbar {
+        overflow-x: hidden;
+    }
+
+    .navbar .nav-links .bondIndia_logo {
+        margin-left: 1rem;
+        /* width: 10%; */
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+
+    .navbar .nav-links .logo {
+        margin-left: 10rem;
+        /* margin-top: -2rem; */
+        /* width: auto; */
+    }
+}
+
+section {
+    /* display: block; */
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    /* overflow: hidden; */
+
+}
+
+.section_main {
+    width: 100%;
+    height: 70vh;
+    background: #FFF8EE;
+    /* position: relative;    */
+}
+
+.section_row_main {
+    text-align: center;
+    padding-top: 5rem
+}
+
+.section_row_main h2 {
+
+
+    font-size: 45px;
+    line-height: 45px;
+
+    color: #202222f6;
+}
+
+.section_row_main h1 {
+
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 70px;
+
+    color: #202222;
+    padding: 15px 0 5px;
+    font-weight: 700;
+}
+
+.section_row_main p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #202222;
+    padding: 20px 0 10px;
+}
+
+.section_row_main .section_click {
+    width: 230px;
+    height: 50px;
+    background: #E8780A;
+    border: 1px solid #A75402;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgb(232 120 10 / 45%);
+    border-radius: 25px;
+    margin: 0 auto;
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 15px;
+
+}
+
+.section_row_main a {
+    text-decoration: none;
+}
+
+.section_main img {
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    right: 0;
+    top: 20rem;
+}
+
+@media(max-width:1200px) {
+    .section_main img {
+        display: none;
+    }
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+.section_grid_main {
+
+    width: 100%;
+
+    max-width: 50rem;
+    height: 430px;
+    border: 1px solid black;
+    position: absolute;
+    top: 28rem;
+    left: 20rem;
+    margin: auto auto;
+    right: auto;
+    background-color: white;
+
+    /* margin: auto 5rem; */
+    /* margin: auto; */
+    border-radius: 1rem;
+}
+
+
+.slider_width {
+    width: 100%;
+    max-width: 40rem;
+
+    height: 40vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+    /* margin-top: 2rem;
+    margin-left: auto; */
+    margin: auto auto;
+    /* position: absolute; */
+    /* z-index: 10; */
+
+
+
+
+}
+
+.slider_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    /* background-color: white; */
+
+}
+
+.slider_section {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(229, 248, 253);
+    height: 76.6%;
+    border-radius: 1rem;
+    width: 100%;
+    /* z-index: 100; */
+
+}
+
+.slider_section h5 {
+    margin-top: 1rem;
+    color: rgb(102, 102, 102);
+}
+
+.slider_section h5 span {
+    color: black;
+}
+
+.slider_section h2 a {
+    color: white;
+}
+
+.slider_section h2 {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    background-color: rgb(2, 175, 214);
+    border-radius: 1rem;
+    /* padding: 0.5rem; */
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.section_grid_main .main_heading {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    /* color: white; */
+    background-color: red;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+
+footer {
+    text-align: center;
+    width: 100%;
+    height: 50vh;
+    /* margin-top: 1rem; */
+
+}
+
+footer h1 {
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 0 30px 0;
+    color: #202222;
+}
+
+footer p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    /* letter-spacing: 0.01em; */
+    color: #202222;
+    max-width: 75%;
+    margin: auto auto;
+}
+
+@media(max-width:1259px) {
+    .section_main img {
+        display: none;
+    }
+}
+
+@media(max-width:1130px) {
+    .section_grid_main {
+        width: 40rem;
+        margin-left: -10rem;
+        /* margin-right: 55rem; */
+    }
+
+    .slider_width {
+        width: auto;
+        height: 130%;
+        margin: 5rem;
+    }
+}
+
+@media(max-width:992px) {
+    .section_grid_main {
+        width: 35rem;
+        margin-left: -10rem;
+        /* margin-right: 55rem; */
+    }
+
+}
+
+@media(max-width:768px) {
+    .section_grid_main {
+        width: 30rem;
+        margin-left: -10rem;
+        height: 60%;
+        /* margin-right: 55rem; */
+    }
+
+}
+
+
+@media(max-width:655px) {
+    .section_grid_main {
+        width: fit-content;
+        margin-left: -10rem;
+        height: 60%;
+        /* margin-right: 55rem; */
+    }
+
+    .slider_width {
+        width: fit-content;
+        /* height: 130%; */
+        /* margin: 5rem; */
+    }
+
+}
+
+@media(max-width:1024px) {
+    footer {
+        margin-top: 15rem;
+    }
+}
+
+/* @media(min-width:1025px) {
+    footer {
+        margin-top: 18rem;
+    }
+} */
+
+
+/* @media(max-width:610px) {
+    .section_grid_main {
+        width: auto; */
+/* margin-left: -16rem; */
+/* margin-right: auto; */
+/* margin-right: 55rem; */
+/* }
+    
+
+} */
